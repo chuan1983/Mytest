@@ -3,9 +3,9 @@ package tw.org.text;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 //Chuan28延續JFrame的物件
-public class Chuan28 extends JFrame{
+public class Chuan29繼承製作視窗 extends JFrame{
 	private JButton open,save,exit; 
-	public Chuan28(){
+	public Chuan29繼承製作視窗(){
 		super("My Window App");
 		open = new JButton("open");
 		save = new JButton("save");
@@ -16,7 +16,7 @@ public class Chuan28 extends JFrame{
 	}
 
 	public static void main(String[] args) {
-		new Chuan28();
+		new Chuan29繼承製作視窗();
 	}
 
 }

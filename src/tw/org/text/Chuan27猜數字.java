@@ -2,7 +2,7 @@ package tw.org.text;
 
 import javax.swing.JOptionPane;
 
-public class Chuan26猜數字 {
+public class Chuan27猜數字 {
 
 	public static void main(String[] args) {
 		//1.create Answer
