@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan20 {
+public class Chuan20骰子進階 {
 
 	public static void main(String[] args) {
 		int[] p = new int[6];   //0-5

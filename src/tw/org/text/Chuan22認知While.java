@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan22 {
+public class Chuan22認知While {
 
 	public static void main(String[] args) {
 		int i= 0, n=10, sum=0;

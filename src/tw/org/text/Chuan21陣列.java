@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan21 {
+public class Chuan21陣列 {
 
 	public static void main(String[] args) {
 		int[][]a;

@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan23 {
+public class Chuan23對應Bike {
 
 	public static void main(String[] args) {
 		Bike myBike ;
