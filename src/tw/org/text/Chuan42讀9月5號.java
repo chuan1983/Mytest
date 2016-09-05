@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 
-public class Chuan40讀9月5號 {
+public class Chuan42讀9月5號 {
 
 	public static void main(String[] args) {
 		try {

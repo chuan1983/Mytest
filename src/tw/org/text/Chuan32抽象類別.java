@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan30抽象類別 {
+public class Chuan32抽象類別 {
 
 	public static void main(String[] args) {
 		Chuan301 obj1 = new Chuan301();

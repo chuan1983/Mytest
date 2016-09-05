@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan31RuntimeException用法 {
+public class Chuan33RuntimeException用法 {
 
 	public static void main(String[] args) {
 		int a = 10,b = 0;

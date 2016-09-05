@@ -1,31 +1,30 @@
 package tw.org.text;
 
-import java.io.File;
-
 public class Chuan34 {
-
-	public static void main(String[] args) {
-		File file1 = new File("c:/king/file1");
-		if(file1.isFile()){
-			System.out.println("OK");
-		}
-		else{
+		public static void main(String[] args) {
+			Bird b1 = new Bird();
 			try{
-			if(file1.createNewFile()){
-				System.out.println("OK");
+				//b1.setLeg(2);
+				b1.setLeg(-2);
+			}catch(Exception ee){        //原本try{}catch是要包住下面那段例外，但如果包覆在這段結果是要交給開發者去處理
+				//
 			}
-			else{
-				System.out.println("creat fail");
-			}
-			}
-			catch(Exception ie){
-				System.out.println("");
-			}
-		}
-	
-		File file2 = new File("c:/text/bir1");
-		if(file2.isDirectory()){
-			file2.mkdir();
 		}
 	}
-}
+	class Bird {
+		int leg;
+		void setLeg(int n) throws Exception {
+			if (n<0 || n>2){
+				throw new RuntimeException();     //當小於0或大於0 執行這段例外
+			}
+			leg = n;
+		}
+	}
+//	class Bird {                           //第一步
+//		int leg;
+//		void setLeg(int n)  {
+//			leg = n;
+//		}
+//	}
+	
+	

@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan29interface自訂名稱而不說實作方法 {
+public class Chuan31interface自訂名稱而不說實作方法 {
 
 	public static void main(String[] args) {
 		Chuan292 obj1 = new Chuan292();

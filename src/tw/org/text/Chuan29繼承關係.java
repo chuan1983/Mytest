@@ -1,6 +1,6 @@
 package tw.org.text;
 
-public class Chuan27 {
+public class Chuan29繼承關係 {
 
 	public static void main(String[] args) {
 		Chuan271 obj1 = new Chuan271(2);
