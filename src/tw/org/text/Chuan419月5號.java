@@ -3,7 +3,7 @@ package tw.org.text;
 import java.util.HashSet;
 
 
-public class Chuan41 {
+public class Chuan419月5號 {
 
 	public static void main(String[] args) {
 		HashSet set = new HashSet();

@@ -2,7 +2,7 @@ package tw.org.text;
 
 import java.util.TreeSet;
 
-public class Chuan42 {
+public class Chuan429月5號 {
 
 		public static void main(String[] args) {
 			TreeSet set = new TreeSet(); //hsahset沒有排列功能   treeset 能排列整齊

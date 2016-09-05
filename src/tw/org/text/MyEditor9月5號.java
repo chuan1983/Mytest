@@ -20,12 +20,12 @@ import javax.swing.JTextArea;
 import javafx.stage.FileChooser;
 import jdk.jfr.events.FileWriteEvent;
 
-public class MyEditor extends JFrame{
+public class MyEditor9月5號 extends JFrame{
 	private JButton open,save,exit; //第2步
 	private JTextArea editor;   //第3步
 	private File openFile;      //第6步
 
-	public MyEditor(){
+	public MyEditor9月5號(){
 		super("My Editor");                         //建立視窗
 		setLayout(new BorderLayout());              //建立視窗
 		//2
@@ -107,7 +107,7 @@ public class MyEditor extends JFrame{
 		}
 	}
 	public static void main(String[] args) {
-		new  MyEditor();
+		new  MyEditor9月5號();
 	}
 
 }
