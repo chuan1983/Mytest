@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 
-public class Chuan40串接9月5號 {
+public class Chuan40串接 {
 
 	public static void main(String[] args) {
 		try {

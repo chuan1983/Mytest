@@ -2,7 +2,7 @@ package tw.org.text;
 
 import java.util.LinkedList;
 
-public class Chuan459月5號 {
+public class Chuan45 {
 
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();

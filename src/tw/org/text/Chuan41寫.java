@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class Chuan41寫9月5號 {
+public class Chuan41寫 {
 
 	public static void main(String[] args) {
 		Student s1 = new Student("Chuan",76, 54, 43);

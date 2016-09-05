@@ -3,7 +3,7 @@ package tw.org.text;
 import java.io.File;
 import java.io.FileReader;
 
-public class Chuan389月5號 {
+public class Chuan38 {
 
 	public static void main(String[] args) {
 		File f1 = new File("dir1/brad.txt");

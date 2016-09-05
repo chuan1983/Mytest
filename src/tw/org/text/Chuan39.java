@@ -3,7 +3,7 @@ package tw.org.text;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-public class Chuan399月5號 {
+public class Chuan39 {
 
 	public static void main(String[] args) {
 		try {
