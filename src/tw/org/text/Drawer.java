@@ -19,6 +19,7 @@ public class Drawer extends JPanel{
 		MyListener listener = new MyListener();
 		addMouseListener(listener);
 		addMouseMotionListener(listener);
+		
 		lines = new LinkedList<>();
 	}
 	@Override
@@ -43,6 +44,13 @@ public class Drawer extends JPanel{
 	void clear(){
 		lines.clear(); //全部清除
 		repaint();     //重劃
+	}
+	void undo(){
+		lines.removeLast();
+		repaint();
+	}
+	void redo(){
+		
 	}
 	private class MyListener extends MouseAdapter {
 

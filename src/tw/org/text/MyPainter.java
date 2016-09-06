@@ -2,6 +2,9 @@ package tw.org.text;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -28,6 +31,18 @@ public class MyPainter extends JFrame{          //視窗Drower 引用JFrame的�
 		setSize(1024, 768);                        //視窗大小
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		clear.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clearDrawer();
+			}
+		});
+	}
+	
+	private void clearDrawer(){
+		drawer.clear();
 	}
 
 	public static void main(String[] args) {
