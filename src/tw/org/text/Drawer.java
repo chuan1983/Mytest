@@ -14,13 +14,14 @@ import javax.swing.JPanel;
 
 public class Drawer extends JPanel{
 	//private LinkedList<HashMap<String,Integer>>line;   //9/6  一條線
-	private LinkedList<LinkedList<HashMap<String,Integer>>>lines;
+	private LinkedList<LinkedList<HashMap<String,Integer>>>lines,recycle;
 	public Drawer(){
 		MyListener listener = new MyListener();
 		addMouseListener(listener);
 		addMouseMotionListener(listener);
 		
 		lines = new LinkedList<>();
+		recycle = new LinkedList<>();
 	}
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -46,11 +47,16 @@ public class Drawer extends JPanel{
 		repaint();     //重劃
 	}
 	void undo(){
-		lines.removeLast();
-		repaint();
+		if(lines.size()<0){
+			recycle.add(lines.removeLast());
+			repaint();
+		}
 	}
 	void redo(){
-		
+		if(recycle.size()<0){
+			lines.add(recycle.removeLast());
+			repaint();
+		}
 	}
 	private class MyListener extends MouseAdapter {
 
@@ -87,13 +93,13 @@ public class Drawer extends JPanel{
 			lines.add(line);
 		}
 
-		@Override
-		public void mouseReleased(MouseEvent e) {
-			super.mouseReleased(e);
-			int x = e.getX(), y = e.getY();
-			//測試
-			//System.out.println("Released:"+ x + "x" + y);
-		}
+//		@Override
+//		public void mouseReleased(MouseEvent e) {
+//			super.mouseReleased(e);
+//			int x = e.getX(), y = e.getY();
+//			//測試
+//			//System.out.println("Released:"+ x + "x" + y);
+//		}
 		
 	}
 	
