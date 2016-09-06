@@ -39,6 +39,11 @@ public class Drawer extends JPanel{
 			}
 		}
 	}
+	//讓My Painter能呼叫清除
+	void clear(){
+		lines.clear(); //全部清除
+		repaint();     //重劃
+	}
 	private class MyListener extends MouseAdapter {
 
 		@Override
