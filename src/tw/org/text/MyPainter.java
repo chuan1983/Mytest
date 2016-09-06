@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
@@ -16,10 +15,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
+
 public class MyPainter extends JFrame{          //視窗Drower 引用JFrame的功能
 		
 	private Drawer drawer;
 	private JButton clear, undo, redo,save;
+	private MyClock clock;
 	
 	public MyPainter(){
 		super("My Painter");
@@ -29,12 +30,17 @@ public class MyPainter extends JFrame{          //視窗Drower 引用JFrame的�
 		undo = new JButton("undo");
 		redo = new JButton("redo");
 		save = new JButton("save");
-		
-		JPanel top =new JPanel(new FlowLayout(FlowLayout.LEFT));     //左邊
-		top.add(clear);
-		top.add(undo);
-		top.add(redo);
-		top.add(save);
+		clock = new MyClock();
+		JPanel top = new JPanel(new BorderLayout());
+		JPanel topLeft = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel topRight = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+		top.add(topLeft, BorderLayout.WEST);
+		top.add(topRight, BorderLayout.EAST);
+		topLeft.add(clear);
+		topLeft.add(undo);
+		topLeft.add(redo);
+		topLeft.add(save);
+		topRight.add(clock);
 		add(top,BorderLayout.NORTH);        //北邊
 		
 		drawer = new Drawer();                //放在中間
