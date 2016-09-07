@@ -1,5 +1,6 @@
 package tw.org.text;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -11,19 +12,19 @@ public class Chuan53 {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		try {
+			File sendFile = new File("dir1/images.jpg");
+			byte[] buf = new byte[(int)sendFile.length()];
+			FileInputStream fin = 
+					new FileInputStream(sendFile);
+			fin.read(buf);
+			fin.close();
+			
 			Socket socket = 
 					new Socket(InetAddress.getByName("10.1.6.91"),9999);
 			
-			FileInputStream fin = 
-					new FileInputStream("dir1/images.jpg");
 			OutputStream out = socket.getOutputStream();
-			
-			int b;
-			while((b=fin.read())!= -1){
-			out.write(b);	
-			}
-			
-			fin.close();
+						
+			out.write(buf);
 			out.flush();
 			out.close();			
 			socket.close();
