@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 public class Chuan51 {
 
 	public static void main(String[] args) {         //設定傳封包
-		String data = "Hello word";
+		String data = "我是柱哥";
 		byte[] buf = data.getBytes();
 		try {
 			DatagramSocket socket = 
