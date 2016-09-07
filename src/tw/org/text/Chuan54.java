@@ -10,15 +10,20 @@ public class Chuan54 {
 
 	public static void main(String[] args) {
 		try {
-			ServerSocket sever = new ServerSocket(9999);
+			ServerSocket sever = 
+					new ServerSocket(9999);
 			Socket socket = sever.accept();
 			
 			InputStream in = socket.getInputStream();
+			int c;
+			while((c = in.read())!= -1){
+				System.out.println((char)c);
+			}
 			in.close();
 					
 			sever.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 

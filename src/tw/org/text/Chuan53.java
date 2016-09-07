@@ -13,6 +13,7 @@ public class Chuan53 {
 					new Socket(InetAddress.getByName("10,1,6,91"),9999);
 			
 			OutputStream out = socket.getOutputStream();
+			out.write("OK is KO".getBytes());
 			out.flush();
 			out.close();
 			
