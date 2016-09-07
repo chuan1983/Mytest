@@ -9,9 +9,10 @@ import java.net.Socket;
 public class Chuan53 {
 
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
 		try {
 			Socket socket = 
-					new Socket(InetAddress.getByName("10,1,6,91"),9999);
+					new Socket(InetAddress.getByName("10.1.6.91"),9999);
 			
 			FileInputStream fin = 
 					new FileInputStream("dir1/images.jpg");
@@ -26,6 +27,8 @@ public class Chuan53 {
 			out.flush();
 			out.close();			
 			socket.close();
+			System.out.println(System.currentTimeMillis()-start);
+			System.out.println("ssnd ok");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
