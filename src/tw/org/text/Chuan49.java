@@ -32,25 +32,32 @@ public class Chuan49 extends JFrame{
 		private int viewW, viewH;
 		//private int ballX, ballY;
 		private LinkedList<Ball> balls;
+		private Color[] colors = {Color.red, Color.green, Color.yellow, Color.blue, Color.black};
 		
 		MyGame(){
 			timer = new Timer(); 
-			timer.schedule(new ViewTask(), 1000, 70);        //球動幾秒
+			timer.schedule(new TimerTask() {				
+				@Override
+				public void run() {
+					repaint();
+				}
+			}, 1000, 70);        //球動幾秒
+			
 			balls = new LinkedList<>();
 			addMouseMotionListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					balls.add(new Ball(e.getX(),e.getY(),40,40,10,10,Color.red));
+					balls.add(new Ball(e.getX(),e.getY(),40,40,10,10,colors[(int)(Math.random()*5)]));
 				}
 			});
 		}
-		private class ViewTask extends TimerTask{
-			@Override
-			public void run() {
-				//ballX += 10; ballY +=10;     //精細度
-				repaint();
-			}
-		}
+//		private class ViewTask extends TimerTask{
+//			@Override
+//			public void run() {
+//				//ballX += 10; ballY +=10;     //精細度
+//				repaint();
+//			}
+//		}
 		private class Ball{                           //設計多粒球成物件形式
 			private int x, y, w, h, dx, dy;
 			private Color color;
