@@ -1,5 +1,6 @@
 package tw.org.text;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetAddress;
@@ -12,11 +13,18 @@ public class Chuan53 {
 			Socket socket = 
 					new Socket(InetAddress.getByName("10,1,6,91"),9999);
 			
+			FileInputStream fin = 
+					new FileInputStream("dir1/images.jpg");
 			OutputStream out = socket.getOutputStream();
-			out.write("OK is KO".getBytes());
-			out.flush();
-			out.close();
 			
+			int b;
+			while((b=fin.read())!= -1){
+			out.write(b);	
+			}
+			
+			fin.close();
+			out.flush();
+			out.close();			
 			socket.close();
 		} catch (IOException e) {
 			e.printStackTrace();

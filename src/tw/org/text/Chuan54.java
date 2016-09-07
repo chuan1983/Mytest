@@ -1,5 +1,6 @@
 package tw.org.text;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,15 +14,18 @@ public class Chuan54 {
 			ServerSocket sever = 
 					new ServerSocket(9999);
 			Socket socket = sever.accept();
-			
+						
+			FileOutputStream fout = 
+					new FileOutputStream("upload/chuan.jpg");
 			InputStream in = socket.getInputStream();
 			int c;
 			while((c = in.read())!= -1){
-				System.out.println((char)c);
+				fout.write(c);
 			}
+			fout.flush();
+			fout.close();
 			in.close();
-					
-			sever.close();
+			socket.close();
 		} catch (IOException e) {
 			
 			e.printStackTrace();
