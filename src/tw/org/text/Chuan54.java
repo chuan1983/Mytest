@@ -12,7 +12,7 @@ public class Chuan54 {
 	public static void main(String[] args) {
 		try {
 			ServerSocket sever = 
-					new ServerSocket(9999);
+					new ServerSocket(9988);
 			Socket socket = sever.accept();
 						
 			FileOutputStream fout = 

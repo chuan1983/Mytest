@@ -12,7 +12,7 @@ public class Chuan53 {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		try {
-			File sendFile = new File("dir1/images.jpg");
+			File sendFile = new File("dir1/abc.jpg");
 			byte[] buf = new byte[(int)sendFile.length()];
 			FileInputStream fin = 
 					new FileInputStream(sendFile);
@@ -20,7 +20,7 @@ public class Chuan53 {
 			fin.close();
 			
 			Socket socket = 
-					new Socket(InetAddress.getByName("10.1.6.91"),9999);
+					new Socket(InetAddress.getByName("10.1.6.91"), 9999);
 			
 			OutputStream out = socket.getOutputStream();
 						
