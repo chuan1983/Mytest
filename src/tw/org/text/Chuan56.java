@@ -14,7 +14,7 @@ public class Chuan56 {
 
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("http://pdfmyurl.com?url=https://www.gamer.com.tw/");  //例2.
+			URL url = new URL("http://pdfmyurl.com?url=https://www.gamer.com.tw/");  //例2.  網址轉成pdf
 			//例1. URL url = new URL("http://a.ecimg.tw/pic/v1/data/item/201609/D/S/A/B/0/3/DSAB03-A9007E07P000_57d0c392ad024.jpg");       //url物件實體化    這邊的檔案內容是jpg原始檔所以是圖檔
 			//URLConnection conn = url.openConnection();  //拿到url.OC 傳回前面URLC conn
 			//這裡把上面的強制轉型下面的
